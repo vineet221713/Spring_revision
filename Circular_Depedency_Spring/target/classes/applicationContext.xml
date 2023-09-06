@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="aid" class="com.vineet.A">
+	
+	<!-- <constructor-arg name="a1" ref="bid"/>   -->
+	
+	<property name="b1" ref="bid"/>
+	
+</bean>
+
+<bean id="bid" class="com.vineet.B">
+	<constructor-arg ref="aid"></constructor-arg>
+	
+</bean>
+
+</beans>
